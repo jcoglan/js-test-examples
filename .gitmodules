@@ -1,0 +1,9 @@
+[submodule "vendor/nodeunit"]
+	path = vendor/nodeunit
+	url = git://github.com/caolan/nodeunit.git
+[submodule "vendor/js.class"]
+	path = vendor/js.class
+	url = git://github.com/jcoglan/js.class.git
+[submodule "vendor/jasmine"]
+	path = vendor/jasmine
+	url = git://github.com/pivotal/jasmine.git

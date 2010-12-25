@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Example Test Suite</title>
+    <link rel="stylesheet" href="../vendor/nodeunit/dist/browser/nodeunit.css" type="text/css" />
+    <script src="../vendor/nodeunit/dist/browser/nodeunit.js"></script>
+    <script src="../vendor/require.js"></script>
+  </head>
+  <body>
+    <h1 id="nodeunit-header">Example Test Suite</h1>
+    <script>
+      require(['../nodeunit/object_spec'], function(module) {
+        console.log(module)
+        nodeunit.run({
+          'Suite One': module.testSomething
+        })
+      })
+    </script>
+  </body>
+</html>
+
