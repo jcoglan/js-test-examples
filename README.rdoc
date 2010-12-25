@@ -1,0 +1,43 @@
+= JavaScript testing examples
+
+In order to make the JS.Class testing experience as good as possible,
+I'm trying out some other frameworks to see how they work on different
+platforms.
+
+JS.Class currently supports:
+
+* IE, Firefox, Chrome, Safari, Opera etc
+* V8, Node
+* Rhino, Narwhal
+* SpiderMonkey
+* XULRunner
+* Windows Script Host
+
+Here's how to run the examples I have so far:
+
+  git clone git://github.com/jcoglan/js-test-examples.git
+  cd js-test-examples
+  git submodule --init --recursive
+  
+  cd vendor/jasmine
+  rake jasmine:build
+  cd ../..
+  open jasmine/browser.html
+  # console not working yet
+  
+  cd vendor/nodeunit
+  make
+  make browser
+  cd ../..
+  open nodeunit/browser.html # don't quite work yet
+  node vendor/nodeunit/bin/nodeunit nodeunit/object_spec.js
+  
+  cd vendor/js.class
+  jake
+  cd ../..
+  open js.class/browser.html
+  node js.class/console.js
+  v8 js.class/console.js
+  rhino js.class/console.js
+  # etc
+
