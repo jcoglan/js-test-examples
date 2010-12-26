@@ -18,24 +18,32 @@ Here's how to run the examples I have so far:
   git clone git://github.com/jcoglan/js-test-examples.git
   cd js-test-examples
   git submodule --init --recursive
-  
+
+=== Jasmine
+
   cd vendor/jasmine
   rake jasmine:build
   cd ../..
   open jasmine/browser.html
   # console not working yet
-  
+
+=== Nodeunit
+
   cd vendor/nodeunit
   make
   make browser
   cd ../..
   open nodeunit/browser.html # doesn't quite work yet
   node vendor/nodeunit/bin/nodeunit nodeunit/object_spec.js
-  
+
+=== QUnit
+
   open qunit/browser.html
   rhino qunit/console.js
   # doesn't work on node
-  
+
+=== JS.Class
+
   cd vendor/js.class
   jake
   cd ../..
