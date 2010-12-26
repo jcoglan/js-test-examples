@@ -7,3 +7,6 @@
 [submodule "vendor/jasmine"]
 	path = vendor/jasmine
 	url = git://github.com/pivotal/jasmine.git
+[submodule "vendor/qunit"]
+	path = vendor/qunit
+	url = git://github.com/jquery/qunit.git

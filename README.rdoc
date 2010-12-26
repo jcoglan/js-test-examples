@@ -29,15 +29,18 @@ Here's how to run the examples I have so far:
   make
   make browser
   cd ../..
-  open nodeunit/browser.html # don't quite work yet
+  open nodeunit/browser.html # doesn't quite work yet
   node vendor/nodeunit/bin/nodeunit nodeunit/object_spec.js
+  
+  open qunit/browser.html
+  rhino qunit/console.js
+  # doesn't work on node
   
   cd vendor/js.class
   jake
   cd ../..
   open js.class/browser.html
-  node js.class/console.js
-  v8 js.class/console.js
   rhino js.class/console.js
+  node js.class/console.js
   # etc
 
