@@ -25,7 +25,7 @@ Here's how to run the examples I have so far:
   rake jasmine:build
   cd ../..
   open jasmine/browser.html
-  # console not working yet
+  node jasmine/console.js
 
 === JS.Class
 

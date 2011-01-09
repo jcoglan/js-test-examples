@@ -9,13 +9,15 @@ if (this.ActiveXObject) load = function(path) {
   }
 };
 
-JASMINE_PATH = 'vendor/jasmine/lib/'
+JASMINE_PATH = 'vendor/jasmine-node/lib/jasmine/'
 
 if (typeof require === 'function') {
-  require('../' + JASMINE_PATH + 'jasmine')
-  require('./object_spec')
+  require('../' + JASMINE_PATH + 'index')
 } else {
-  load(JASMINE_PATH + 'jasmine.js')
-  load('jasmine/object_spec.js')
+  load(JASMINE_PATH + 'index.js')
 }
+
+jasmine.executeSpecsInFolder(__dirname, function(runner, log){
+  process.exit(runner.results().failedCount)
+}, true, true)
 

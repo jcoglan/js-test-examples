@@ -13,3 +13,6 @@
 [submodule "vendor/vows"]
 	path = vendor/vows
 	url = git://github.com/cloudhead/vows.git
+[submodule "vendor/jasmine-node"]
+	path = vendor/jasmine-node
+	url = git://github.com/mhevery/jasmine-node.git
