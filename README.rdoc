@@ -19,6 +19,15 @@ Here's how to run the examples I have so far:
   cd js-test-examples
   git submodule --init --recursive
 
+=== Dojo
+
+  cd vendor
+  wget http://download.dojotoolkit.org/release-1.5.0/dojo-release-1.5.0-src.tar.gz
+  tar zxvf dojo-release-1.5.0-src.tar.gz
+  cd ../
+  python -m SimpleHTTPServer
+  open http://0.0.0.0:8000/dojo/browser.html
+
 === Jasmine
 
   cd vendor/jasmine
