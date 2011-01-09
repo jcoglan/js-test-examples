@@ -52,7 +52,7 @@ Here's how to run the examples I have so far:
   make
   make browser
   cd ../..
-  open nodeunit/browser.html # doesn't quite work yet
+  open nodeunit/browser.html
   node vendor/nodeunit/bin/nodeunit nodeunit/object_spec.js
 
 === QUnit
