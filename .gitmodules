@@ -16,3 +16,6 @@
 [submodule "vendor/jasmine-node"]
 	path = vendor/jasmine-node
 	url = git://github.com/mhevery/jasmine-node.git
+[submodule "vendor/screw-unit"]
+	path = vendor/screw-unit
+	url = git://github.com/nkallen/screw-unit.git

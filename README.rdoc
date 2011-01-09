@@ -61,6 +61,10 @@ Here's how to run the examples I have so far:
   rhino qunit/console.js
   # doesn't work on node
 
+=== Screw.Unit
+
+  open screw-unit/browser.html
+
 === Vows
 
   npm install eyes
