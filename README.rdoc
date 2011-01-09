@@ -27,6 +27,16 @@ Here's how to run the examples I have so far:
   open jasmine/browser.html
   # console not working yet
 
+=== JS.Class
+
+  cd vendor/js.class
+  jake
+  cd ../..
+  open js.class/browser.html
+  rhino js.class/console.js
+  node js.class/console.js
+  # etc
+
 === Nodeunit
 
   cd vendor/nodeunit
@@ -42,13 +52,8 @@ Here's how to run the examples I have so far:
   rhino qunit/console.js
   # doesn't work on node
 
-=== JS.Class
+=== Vows
 
-  cd vendor/js.class
-  jake
-  cd ../..
-  open js.class/browser.html
-  rhino js.class/console.js
-  node js.class/console.js
-  # etc
+  npm install eyes
+  node vows/object_spec.js
 

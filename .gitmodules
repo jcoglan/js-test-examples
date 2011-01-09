@@ -10,3 +10,6 @@
 [submodule "vendor/qunit"]
 	path = vendor/qunit
 	url = git://github.com/jquery/qunit.git
+[submodule "vendor/vows"]
+	path = vendor/vows
+	url = git://github.com/cloudhead/vows.git
