@@ -7,10 +7,10 @@ platforms.
 JS.Class currently supports:
 
 * IE, Firefox, Chrome, Safari, Opera etc
-* V8, Node
-* Rhino, Narwhal
-* SpiderMonkey
-* XULRunner
+* V8, Node.js
+* Rhino, Narwhal, RingoJS
+* SpiderMonkey, JaegerMonkey
+* Mozilla XULRunner
 * Windows Script Host
 
 Here's how to run the examples I have so far:
