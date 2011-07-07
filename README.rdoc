@@ -30,9 +30,6 @@ Here's how to run the examples I have so far:
 
 === Jasmine
 
-  cd vendor/jasmine
-  rake jasmine:build
-  cd ../..
   open jasmine/browser.html
   node jasmine/console.js
 
