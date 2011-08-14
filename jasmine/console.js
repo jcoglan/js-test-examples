@@ -9,7 +9,7 @@ if (this.ActiveXObject) load = function(path) {
   }
 };
 
-JASMINE_PATH = 'vendor/jasmine-node/lib/jasmine/'
+JASMINE_PATH = 'vendor/jasmine-node/lib/jasmine-node/'
 
 if (typeof require === 'function') {
   require('../' + JASMINE_PATH + 'index')

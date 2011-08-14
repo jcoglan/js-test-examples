@@ -7,7 +7,7 @@ QUnit.log = function(result, message) {
   print(result ? 'PASS' : 'FAIL', message)
 }
 
-QUnit.done = function(failures, total) {
-  print(total + ' tests, ' + failures + ' failures')
+QUnit.done = function(result) {
+  print(result.total + ' tests, ' + result.failed + ' failures')
 }
 

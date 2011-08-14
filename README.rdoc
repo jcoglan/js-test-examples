@@ -47,7 +47,6 @@ Here's how to run the examples I have so far:
 
   cd vendor/nodeunit
   make
-  make browser
   cd ../..
   open nodeunit/browser.html
   node vendor/nodeunit/bin/nodeunit nodeunit/object_spec.js
@@ -64,6 +63,5 @@ Here's how to run the examples I have so far:
 
 === Vows
 
-  npm install eyes
   node vows/object_spec.js
 
