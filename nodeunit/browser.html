@@ -3,13 +3,14 @@
     <title>Example Test Suite</title>
     <link rel="stylesheet" href="../vendor/nodeunit/share/nodeunit.css" type="text/css" />
     <script src="../vendor/nodeunit/examples/browser/nodeunit.js"></script>
-    <script src="../nodeunit/object_spec.js"></script>
+    <script src="../module.js"></script>
+    <script src="./module_spec.js"></script>
   </head>
   <body>
     <h1 id="nodeunit-header">Example Test Suite</h1>
     <script>
       nodeunit.run({
-        'Some code': ObjectSpec
+        'Some code': ModuleSpec
       })
     </script>
   </body>

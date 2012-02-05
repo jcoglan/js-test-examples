@@ -13,11 +13,13 @@ QUNIT_PATH = 'vendor/qunit/qunit/'
 
 if (typeof require === 'function') {
   require('../' + QUNIT_PATH + 'qunit')
+  require('../module')
   require('./console_bindings')
-  require('./object_spec')
+  require('./module_spec')
 } else {
   load(QUNIT_PATH + 'qunit.js')
+  load('module.js')
   load('qunit/console_bindings.js')
-  load('qunit/object_spec.js')
+  load('qunit/module_spec.js')
 }
 

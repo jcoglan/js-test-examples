@@ -51,7 +51,7 @@ Here's how to run the examples I have so far:
     make
     cd ../..
     open nodeunit/browser.html
-    node vendor/nodeunit/bin/nodeunit nodeunit/object_spec.js
+    node vendor/nodeunit/bin/nodeunit nodeunit/module_spec.js
 
 ### QUnit
 
@@ -65,5 +65,8 @@ Here's how to run the examples I have so far:
 
 ### Vows
 
-    node vows/object_spec.js
+    cd vendor/vows
+    npm install
+    cd ../..
+    node vows/module_spec.js
 
