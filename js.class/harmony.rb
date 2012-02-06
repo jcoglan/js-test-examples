@@ -16,6 +16,7 @@ module Console
     puts "#{data['total']} tests, #{data['fail']} failures, #{data['error']} errors"
     @exit_status = status
   rescue
+    puts message
   end
   
   def self.exit_status

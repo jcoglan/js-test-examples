@@ -13,9 +13,10 @@ module Console
     return puts("[#{data['status'].upcase}] #{data['test']}") if data['status']
     
     status = (data['fail'] + data['error'] == 0) ? 0 : 1
-    puts "#{data['total']} tests, #{data['fail']} failures, #{data['error']} errors"
+    puts "#{data['total']} assertions, #{data['fail']} failures, #{data['error']} errors"
     @exit_status = status
   rescue
+    puts message
   end
   
   def self.exit_status
