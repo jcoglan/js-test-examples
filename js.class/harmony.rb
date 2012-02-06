@@ -4,15 +4,7 @@ require 'json'
 
 page = Harmony::Page.new(<<-HTML)
   <!doctype html>
-  <html>
-    <head>
-      <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-      <title>JS.Class test runner</title>
-    </head>
-    <body>
-      <script type="text/javascript"></script>
-    </body>
-  </html>
+  <html></html>
 HTML
 
 module Console
@@ -36,7 +28,7 @@ page.window['console'] = Console
 page.window['CWD'] = File.expand_path('../..', __FILE__)
 page.window['JSCLASS_PATH'] = File.expand_path('../../vendor/js.class/build/min', __FILE__)
 
-page.load 'vendor/js.class/build/min/loader-browser.js'
+page.load 'vendor/js.class/build/src/loader-browser.js'
 page.load 'js.class/runner.js'
 
 page.x '$wait(-2000)'
