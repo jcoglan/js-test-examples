@@ -25,28 +25,24 @@ describe("Module", function() {
   })
   
   it("fetches a resource", function() {
-    this.jQueryGet = this.sandbox.stub(jQuery, "get"),
-    this.response  = null
+    this.sandbox.stub(jQuery, "get").yields("OK")
     
-    this.jQueryGet.callsArgWith(1, "OK")
+    this.response = null
     this.object.fetch("/foo", function(r) { this.response = r }, this)
     waitsFor(function() { return this.response })
     
     runs(function() {
       expect(this.response).toEqual("OK")
-      var getCall = this.jQueryGet.getCall(0)
-      expect(getCall.args[0]).toEqual("/foo")
-      expect(typeof getCall.args[1]).toEqual("function")
+      sinon.assert.calledWith(jQuery.get, "/foo")
     })
   })
   
   it("yields different responses for different paths", function() {
-    this.jQueryGet = this.sandbox.stub(jQuery, "get"),
-    this.response  = null
+    this.sandbox.stub(jQuery, "get")
+    jQuery.get.withArgs("/foo").yields("hello")
+    jQuery.get.withArgs("/bar").yields("bye")
     
-    this.jQueryGet.withArgs("/foo").callsArgWith(1, "hello")
-    this.jQueryGet.withArgs("/bar").callsArgWith(1, "bye")
-    
+    this.response = null
     this.object.fetch("/bar", function(r) { this.response = r }, this)
     waitsFor(function() { return this.response })
     
