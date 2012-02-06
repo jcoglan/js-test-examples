@@ -35,6 +35,7 @@ Here's how to run the examples I have so far:
     open jasmine/browser.html
     ./vendor/jasmine-node/bin/jasmine-node jasmine/
     phantomjs jasmine/phantom.js
+    ruby jasmine/harmony.rb
 
 ### JS.Class
 
@@ -46,6 +47,7 @@ Here's how to run the examples I have so far:
     node js.class/console.js
     # etc
     phantomjs js.class/phantom.js
+    ruby js.class/harmony.rb
 
 ### Nodeunit
 
