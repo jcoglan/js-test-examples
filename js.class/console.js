@@ -9,7 +9,7 @@ if (this.ActiveXObject) load = function(path) {
   }
 };
 
-JSCLASS_PATH = 'vendor/js.class/build/min/'
+JSCLASS_PATH = 'vendor/js.class/build/src/'
 jQuery = {}
 
 if (typeof require === 'function') {

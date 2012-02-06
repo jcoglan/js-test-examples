@@ -26,7 +26,7 @@ end
 page.window['Fixture'] = File
 page.window['console'] = Console
 page.window['CWD'] = File.expand_path('../..', __FILE__)
-page.window['JSCLASS_PATH'] = File.expand_path('../../vendor/js.class/build/min', __FILE__)
+page.window['JSCLASS_PATH'] = File.expand_path('../../vendor/js.class/build/src', __FILE__)
 
 page.load 'vendor/js.class/build/src/loader-browser.js'
 page.load 'js.class/runner.js'
