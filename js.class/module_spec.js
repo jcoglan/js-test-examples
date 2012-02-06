@@ -10,7 +10,8 @@ ModuleSpec = JS.Test.describe("Module", function() { with(this) {
   }})
   
   it("fetches a resource", function(resume) { with(this) {
-    expect(jQuery, "get").given("/foo").yields(["OK"])
+    expect(jQuery, "get").yields(["OK"])
+    
     object.fetch("/foo", function(response) {
       resume(function() {
         assertEqual("OK", response)
@@ -21,6 +22,7 @@ ModuleSpec = JS.Test.describe("Module", function() { with(this) {
   it("yields different responses for different paths", function(resume) { with(this) {
     stub(jQuery, "get").given("/foo").yields(["hello"])
     stub(jQuery, "get").given("/bar").yields(["bye"])
+    
     object.fetch("/bar", function(response) {
       resume(function() {
         assertEqual("bye", response)
