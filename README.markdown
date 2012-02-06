@@ -34,6 +34,7 @@ Here's how to run the examples I have so far:
     cd ../../
     open jasmine/browser.html
     ./vendor/jasmine-node/bin/jasmine-node jasmine/
+    phantomjs jasmine/phantom.js
 
 ### JS.Class
 
@@ -44,6 +45,7 @@ Here's how to run the examples I have so far:
     rhino js.class/console.js
     node js.class/console.js
     # etc
+    phantomjs js.class/phantom.js
 
 ### Nodeunit
 
