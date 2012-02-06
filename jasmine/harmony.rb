@@ -24,28 +24,30 @@ module Console
   end
 end
 
+ROOT = File.expand_path('../..', __FILE__)
+
 page.window['Fixture'] = File
 page.window['console'] = Console
-page.window['CWD'] = File.expand_path('../..', __FILE__)
+page.window['ROOT']    = ROOT
 
-page.load 'vendor/jasmine/lib/jasmine-core/jasmine.js'
-page.load 'vendor/jasmine/lib/jasmine-core/jasmine-html.js'
+page.load ROOT + '/vendor/jasmine/lib/jasmine-core/jasmine.js'
+page.load ROOT + '/vendor/jasmine/lib/jasmine-core/jasmine-html.js'
 
-page.load 'node_modules/sinon/lib/sinon.js'
-page.load 'node_modules/sinon/lib/sinon/collection.js'
-page.load 'node_modules/sinon/lib/sinon/spy.js'
-page.load 'node_modules/sinon/lib/sinon/stub.js'
-page.load 'node_modules/sinon/lib/sinon/sandbox.js'
-page.load 'node_modules/sinon/lib/sinon/assert.js'
+page.load ROOT + '/node_modules/sinon/lib/sinon.js'
+page.load ROOT + '/node_modules/sinon/lib/sinon/collection.js'
+page.load ROOT + '/node_modules/sinon/lib/sinon/spy.js'
+page.load ROOT + '/node_modules/sinon/lib/sinon/stub.js'
+page.load ROOT + '/node_modules/sinon/lib/sinon/sandbox.js'
+page.load ROOT + '/node_modules/sinon/lib/sinon/assert.js'
 
 page.load 'http://code.jquery.com/jquery-1.7.1.min.js'
 
-page.load 'module.js'
+page.load ROOT + '/module.js'
 
-page.load 'jasmine/spec_helper.js'
-page.load 'jasmine/module_spec.js'
-page.load 'jasmine/api_spec.js'
-page.load 'jasmine/runner.js'
+page.load ROOT + '/jasmine/spec_helper.js'
+page.load ROOT + '/jasmine/module_spec.js'
+page.load ROOT + '/jasmine/api_spec.js'
+page.load ROOT + '/jasmine/runner.js'
 
 page.x '$wait(-2000)'
 

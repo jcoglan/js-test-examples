@@ -15,7 +15,7 @@ var readFile = function(path) {
   if (typeof Fixture === 'undefined') return jQuery.get(path)
   
   var deferred = new jQuery.Deferred(),
-      content  = Fixture.read(CWD + path)
+      content  = Fixture.read(ROOT + path)
   
   deferred.resolve(content)
   return deferred
