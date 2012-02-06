@@ -52,7 +52,7 @@ describe("Module", function() {
   })
   
   it("stubs a callback with context", function() {
-    this.objectFetch = this.sandbox.stub(this.object, "fetch", function(path, callback, context) {
+    this.sandbox.stub(this.object, "fetch", function(path, callback, context) {
       callback.call(context, "hello")
     })
     
