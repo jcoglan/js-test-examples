@@ -31,18 +31,27 @@ module Console
   end
 end
 
+page.window['Fixture'] = File
 page.window['console'] = Console
+page.window['CWD'] = File.expand_path('../..', __FILE__)
 
 page.load 'vendor/jasmine/lib/jasmine-core/jasmine.js'
 page.load 'vendor/jasmine/lib/jasmine-core/jasmine-html.js'
+
 page.load 'node_modules/sinon/lib/sinon.js'
 page.load 'node_modules/sinon/lib/sinon/collection.js'
 page.load 'node_modules/sinon/lib/sinon/spy.js'
 page.load 'node_modules/sinon/lib/sinon/stub.js'
 page.load 'node_modules/sinon/lib/sinon/sandbox.js'
 page.load 'node_modules/sinon/lib/sinon/assert.js'
+
+page.load 'http://code.jquery.com/jquery-1.7.1.min.js'
+
 page.load 'module.js'
+
+page.load 'jasmine/spec_helper.js'
 page.load 'jasmine/module_spec.js'
+page.load 'jasmine/api_spec.js'
 page.load 'jasmine/runner.js'
 
 page.x '$wait(-2000)'

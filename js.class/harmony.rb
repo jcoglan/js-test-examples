@@ -31,6 +31,7 @@ module Console
   end
 end
 
+page.window['Fixture'] = File
 page.window['console'] = Console
 page.window['CWD'] = File.expand_path('../..', __FILE__)
 page.window['JSCLASS_PATH'] = File.expand_path('../../vendor/js.class/build/min', __FILE__)

@@ -10,6 +10,7 @@ if (this.ActiveXObject) load = function(path) {
 };
 
 JSCLASS_PATH = 'vendor/js.class/build/min/'
+jQuery = {}
 
 if (typeof require === 'function') {
   require('../' + JSCLASS_PATH + 'loader')
