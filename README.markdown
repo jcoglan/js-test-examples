@@ -6,10 +6,11 @@ out some other frameworks to see how they work on different platforms.
 JS.Class currently supports:
 
 * IE, Firefox, Chrome, Safari, Opera etc
+* PhantomJS, Harmony
 * V8, Node.js
 * Rhino, Narwhal, RingoJS
 * SpiderMonkey, JaegerMonkey
-* Mozilla XULRunner
+* Mozilla XULRunner, Adobe AIR
 * Windows Script Host
 
 Here's how to run the examples I have so far:
