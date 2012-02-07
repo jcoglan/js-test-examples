@@ -1,0 +1,20 @@
+src_files:
+  - api.js
+  - module.js
+
+helpers:
+  - jasmine/spec_helper.js
+  - node_modules/sinon/lib/sinon.js
+  - node_modules/sinon/lib/sinon/collection.js
+  - node_modules/sinon/lib/sinon/spy.js
+  - node_modules/sinon/lib/sinon/stub.js
+  - node_modules/sinon/lib/sinon/sandbox.js
+  - node_modules/sinon/lib/sinon/assert.js
+  - vendor/jquery-1.7.1.min.js
+
+spec_files:
+  - jasmine/*_spec.js
+
+src_dir:
+
+spec_dir: .

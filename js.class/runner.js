@@ -5,7 +5,7 @@ JS.Packages(function() { with(this) {
   autoload(/^(.*)Spec$/, {from: ROOT + '/js.class', require: '$1'})
   autoload(/^.*$/, {from: ROOT})
   
-  file('http://code.jquery.com/jquery-1.7.1.min.js').provides('jQuery')
+  file(ROOT + '/vendor/jquery-1.7.1.min.js').provides('jQuery')
   file(ROOT + '/js.class/spec_helper.js').provides('SpecHelper').requires('jQuery')
 }})
 

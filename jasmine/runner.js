@@ -18,7 +18,7 @@ JS.Packages(function() { with(this) {
        ROOT + '/node_modules/sinon/lib/sinon/assert.js')
       .provides('sinon')
   
-  file('http://code.jquery.com/jquery-1.7.1.min.js').provides('jQuery')
+  file(ROOT + '/vendor/jquery-1.7.1.min.js').provides('jQuery')
   file(ROOT + '/jasmine/spec_helper.js').provides('SpecHelper').requires('jQuery')
 }})
 
