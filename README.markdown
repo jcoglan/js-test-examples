@@ -33,17 +33,26 @@ Here's how to run the examples I have so far:
     cd jasmine-node
     npm install
     cd ../../
+    
     open jasmine/browser.html
+    python -m SimpleHTTPServer & open http://localhost:8000/jasmine/browser.html
+    
     ./vendor/jasmine-node/bin/jasmine-node jasmine/
     phantomjs jasmine/phantom.js
     ruby jasmine/harmony.rb
+    
+    jasmine-headless-webkit
+    rake jasmine:ci
 
 ### JS.Class
 
     cd vendor/js.class
     jake
     cd ../..
+    
     open js.class/browser.html
+    python -m SimpleHTTPServer & open http://localhost:8000/js.class/browser.html
+    
     rhino js.class/console.js
     node js.class/console.js
     # etc
