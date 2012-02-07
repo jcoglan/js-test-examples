@@ -6,7 +6,7 @@ var sinon = (typeof sinon !== "undefined")
           ? sinon
           : require('sinon')
 
-describe("Module", function() {
+ModuleSpec = describe("Module", function() {
   beforeEach(function() {
     this.object = new Module()
     this.global = (function() { return this })()

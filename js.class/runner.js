@@ -1,4 +1,5 @@
 if (typeof ROOT === 'undefined') ROOT = '.'
+JS.cacheBust = true
 
 JS.Packages(function() { with(this) {
   autoload(/^(.*)Spec$/, {from: ROOT + '/js.class', require: '$1'})

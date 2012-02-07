@@ -24,29 +24,14 @@ module Console
   end
 end
 
-ROOT = File.expand_path('../..', __FILE__)
+ROOT =  File.expand_path('../..', __FILE__)
 
 page.window['Fixture'] = File
 page.window['console'] = Console
-page.window['ROOT']    = ROOT
+page.window['ROOT'] = ROOT
+page.window['JSCLASS_PATH'] = File.expand_path('../../vendor/js.class/build/src', __FILE__)
 
-page.load ROOT + '/vendor/jasmine/lib/jasmine-core/jasmine.js'
-page.load ROOT + '/vendor/jasmine/lib/jasmine-core/jasmine-html.js'
-
-page.load ROOT + '/node_modules/sinon/lib/sinon.js'
-page.load ROOT + '/node_modules/sinon/lib/sinon/collection.js'
-page.load ROOT + '/node_modules/sinon/lib/sinon/spy.js'
-page.load ROOT + '/node_modules/sinon/lib/sinon/stub.js'
-page.load ROOT + '/node_modules/sinon/lib/sinon/sandbox.js'
-page.load ROOT + '/node_modules/sinon/lib/sinon/assert.js'
-
-page.load 'http://code.jquery.com/jquery-1.7.1.min.js'
-
-page.load ROOT + '/module.js'
-
-page.load ROOT + '/jasmine/spec_helper.js'
-page.load ROOT + '/jasmine/module_spec.js'
-page.load ROOT + '/jasmine/api_spec.js'
+page.load ROOT + '/vendor/js.class/build/src/loader-browser.js'
 page.load ROOT + '/jasmine/runner.js'
 
 page.x '$wait(-2000)'

@@ -1,4 +1,4 @@
-describe("API client", function() {
+ApiSpec = describe("API client", function() {
   // only run in the browser
   if (typeof window === 'undefined' || !window.location.hostname) return
   
