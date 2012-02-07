@@ -1,4 +1,4 @@
-jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
+jasmine.getEnv().addReporter(new jasmine.TrivialReporter())
 
 if (window.console)
   jasmine.getEnv().addReporter({
@@ -19,5 +19,5 @@ if (window.console)
     }
   })
 
-jasmine.getEnv().execute();
+jasmine.getEnv().execute()
 
