@@ -8,6 +8,8 @@ if (window.console)
           status  = results.failedCount > 0 ? 'failed' : 'passed'
           message = {jasmine: {test: name, status: status}}
       
+      var item = results.getItems().pop()
+      if (item) console.log(item.toString())
       console.log(JSON.stringify(message))
     },
     
