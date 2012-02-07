@@ -7,6 +7,7 @@ SpecHelper = {
       xhr.done(function(r) { jsonString = r })
       waitsFor(function() { return jsonString })
       runs(function() {
+        if (typeof jsonString === 'object') jsonString = JSON.stringify(jsonString)
         this.json = JSON.parse(jsonString)
       })
     })
@@ -20,6 +21,11 @@ SpecHelper = {
     
     deferred.resolve(content)
     return deferred
+  },
+
+  canReadFiles: function() {
+    return typeof Fixture === 'object' ||
+           (typeof window === 'object' && /^http/.test(window.location.protocol))
   }
 };
 
@@ -27,3 +33,5 @@ SpecHelper = {
   for (var key in SpecHelper) this[key] = SpecHelper[key]
 })()
 
+if (typeof exports === 'object')
+  module.exports = SpecHelper

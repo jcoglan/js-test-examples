@@ -1,6 +1,6 @@
 ApiSpec = JS.Test.describe("API client", function() { with(this) {
-  // only run in the browser
-  if (typeof window === 'undefined' || !window.location.hostname) return
+  // only run if we can read files
+  if (!SpecHelper.canReadFiles()) return
   
   jsonFixture("/fixture.json")
   
