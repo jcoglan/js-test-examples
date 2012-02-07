@@ -40,7 +40,7 @@ page.load ROOT + '/node_modules/sinon/lib/sinon/stub.js'
 page.load ROOT + '/node_modules/sinon/lib/sinon/sandbox.js'
 page.load ROOT + '/node_modules/sinon/lib/sinon/assert.js'
 
-page.load 'http://code.jquery.com/jquery-1.7.1.min.js'
+page.load ROOT + '/vendor/jquery-1.7.1.min.js'
 
 page.load ROOT + '/module.js'
 

@@ -10,7 +10,7 @@ helpers:
   - node_modules/sinon/lib/sinon/stub.js
   - node_modules/sinon/lib/sinon/sandbox.js
   - node_modules/sinon/lib/sinon/assert.js
-  - http://code.jquery.com/jquery-1.7.1.min.js
+  - vendor/jquery-1.7.1.min.js
 
 spec_files:
   - jasmine/*_spec.js
