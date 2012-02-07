@@ -6,6 +6,7 @@ var jsonFixture = function(path) {
     xhr.done(function(r) { jsonString = r })
     waitsFor(function() { return jsonString })
     runs(function() {
+      if (typeof jsonString === 'object') jsonString = JSON.stringify(jsonString)
       this.json = JSON.parse(jsonString)
     })
   })
@@ -21,6 +22,15 @@ var readFile = function(path) {
   return deferred
 }
 
-if (typeof global === 'object')
+var SpecHelper = {
+  canReadFiles: function() {
+    return typeof Fixture === 'object' ||
+           (typeof window === 'object' && /^http/.test(window.location.protocol))
+  }
+}
+
+if (typeof exports === 'object') {
   global.jsonFixture = jsonFixture
+  module.exports = SpecHelper
+}
 
