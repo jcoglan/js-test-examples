@@ -8,7 +8,7 @@ JS.Packages(function() { with(this) {
   file(ROOT + '/js.class/spec_helper.js').provides('SpecHelper').requires('jQuery')
 }})
 
-JS.require('JS.Test', 'SpecHelper', 'jQuery', function() {
+JS.require('JS.Test', 'SpecHelper', function() {
   JS.Test.Unit.TestCase.extend(SpecHelper)
   
   JS.require( 'ModuleSpec',
