@@ -31,8 +31,8 @@ page.window['console'] = Console
 page.window['ROOT'] = ROOT
 page.window['JSCLASS_PATH'] = File.expand_path('../../vendor/js.class/build/src', __FILE__)
 
-page.load 'vendor/js.class/build/src/loader-browser.js'
-page.load 'js.class/runner.js'
+page.load ROOT + '/vendor/js.class/build/src/loader-browser.js'
+page.load ROOT + '/js.class/runner.js'
 
 page.x '$wait(-2000)'
 
