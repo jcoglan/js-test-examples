@@ -30,7 +30,7 @@ Here's how to run the examples I have so far:
 
 ### Jasmine
 
-    cd jasmine-node
+    cd vendor/jasmine-node
     npm install
     cd ../../
     
