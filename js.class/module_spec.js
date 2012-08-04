@@ -40,5 +40,24 @@ ModuleSpec = JS.Test.describe("Module", function() { with(this) {
       })
     }, context)
   }})
+  
+  describe("aynsc errors", function() { with(this) {
+    if (!JS.ENV.setTimeout) return
+    
+    before(function() { with(this) {
+      this.asyncFunction = function(callback) {
+        setTimeout(function() {
+          throw new Error("async error")
+          callback(true)
+        }, 10)
+      }
+    }})
+    
+    it("cathces them", function(resume) { with(this) {
+      asyncFunction(function(value) {
+        resume(function() { assert(value) })
+      })
+    }})
+  }})
 }})
 
