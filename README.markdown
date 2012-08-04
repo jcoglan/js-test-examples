@@ -19,6 +19,18 @@ Here's how to run the examples I have so far:
     cd js-test-examples
     git submodule --init --recursive
 
+### Buster
+
+    npm install buster
+    
+    # Browser tests
+    node node_modules/buster/bin/buster-server
+    open http://0.0.0.0:1111/
+    node node_modules/buster/bin/buster-test -c buster/config.js -e browser
+    
+    # Node tests
+    node node_modules/buster/bin/buster-test -c buster/config.js -e node
+
 ### Dojo
 
     cd vendor
