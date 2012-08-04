@@ -8,6 +8,20 @@ this.ModuleSpec = {
     test.deepEqual( object.say(), {hello: "world"} )
     test.notDeepEqual( object.say(), {say: "hi"} )
     test.done()
+  },
+  
+  testAsyncError: function(test) {
+    var asyncFunction = function(callback) {
+      setTimeout(function() {
+        throw new Error("async error")
+        callback()
+      }, 10)
+    }
+    
+    asyncFunction(function(value) {
+      test.ok(value)
+      test.done()
+    })
   }
 }
 
