@@ -9,6 +9,20 @@ vows.describe("some code").addBatch({
     "says hello": function (object) {
       assert.deepEqual({hello: "world"}, object.say())
       assert.notDeepEqual({say: "hi"}, object.say())
+    },
+    
+    "async tests": {
+      topic: function() {
+        var callback = this.callback
+        setTimeout(function() {
+          // hrow new Error("async error") -- this crashes the process
+          callback(true)
+        }, 10)
+      },
+      
+      "work": function(value) {
+        assert.isTrue(value)
+      }
     }
   }
 }).run()
