@@ -64,5 +64,28 @@ describe("Module", function() {
       expect(context.response).toEqual("hello")
     })
   })
+  
+describe("async errors", function() {
+  var global = (function() { return this })()
+  if (!global.window) return
+  
+  beforeEach(function() {
+    this.asyncFunction = function(callback) {
+      setTimeout(function() {
+        throw new Error("async error")
+        callback(true)
+      }, 10)
+    }
+  })
+  
+  it("catches them", function() {
+    var value = null
+    
+    this.asyncFunction(function(v) { value = v })
+    waitsFor(function() { return value })
+    
+    runs(function() { expect(value).toEqual(true) })
+  })
+})
 })
 
