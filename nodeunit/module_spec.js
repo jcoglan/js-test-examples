@@ -10,10 +10,10 @@ this.ModuleSpec = {
     test.done()
   },
   
-  testAsyncError: function(test) {
+  testAsync: function(test) {
     var asyncFunction = function(callback) {
       setTimeout(function() {
-        throw new Error("async error")
+        // throw new Error("async error") -- this crashes the process
         callback(true)
       }, 10)
     }

@@ -15,7 +15,7 @@ vows.describe("some code").addBatch({
       topic: function() {
         var callback = this.callback
         setTimeout(function() {
-          // hrow new Error("async error") -- this crashes the process
+          // throw new Error("async error") -- this crashes the process
           callback(true)
         }, 10)
       },
