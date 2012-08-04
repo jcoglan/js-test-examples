@@ -19,3 +19,6 @@
 [submodule "vendor/screw-unit"]
 	path = vendor/screw-unit
 	url = git://github.com/nkallen/screw-unit.git
+[submodule "vendor/mocha"]
+	path = vendor/mocha
+	url = git://github.com/visionmedia/mocha.git

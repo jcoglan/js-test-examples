@@ -59,6 +59,14 @@ Here's how to run the examples I have so far:
     phantomjs js.class/phantom.js
     ruby js.class/harmony.rb
 
+### Mocha
+
+    cd vendor/mocha
+    npm install
+    cd ../..
+    open mocha/browser.js
+    node vendor/mocha/bin/mocha mocha
+
 ### Nodeunit
 
     cd vendor/nodeunit
