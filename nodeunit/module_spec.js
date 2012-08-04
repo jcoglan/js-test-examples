@@ -14,7 +14,7 @@ this.ModuleSpec = {
     var asyncFunction = function(callback) {
       setTimeout(function() {
         throw new Error("async error")
-        callback()
+        callback(true)
       }, 10)
     }
     
