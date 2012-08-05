@@ -65,27 +65,27 @@ describe("Module", function() {
     })
   })
   
-describe("async errors", function() {
-  var global = (function() { return this })()
-  if (!global.window) return
-  
-  beforeEach(function() {
-    this.asyncFunction = function(callback) {
-      setTimeout(function() {
-        throw new Error("async error")
-        callback(true)
-      }, 10)
-    }
-  })
-  
-  it("catches them", function() {
-    var value = null
+  describe("async errors", function() {
+    var global = (function() { return this })()
+    if (!global.window) return
     
-    this.asyncFunction(function(v) { value = v })
-    waitsFor(function() { return value })
+    beforeEach(function() {
+      this.asyncFunction = function(callback) {
+        setTimeout(function() {
+          throw new Error("async error")
+          callback(true)
+        }, 10)
+      }
+    })
     
-    runs(function() { expect(value).toEqual(true) })
+    it("catches them", function() {
+      var value = null
+      
+      this.asyncFunction(function(v) { value = v })
+      waitsFor(function() { return value })
+      
+      runs(function() { expect(value).toEqual(true) })
+    })
   })
-})
 })
 
